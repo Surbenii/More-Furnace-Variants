@@ -28,6 +28,6 @@ public class ItemInit {
         registerToTab(event, DEEPSLATE_FURNACE_I.get(), Items.FURNACE);
         registerToTab(event, BLACKSTONE_FURNACE_I.get(), DEEPSLATE_FURNACE_I.get());
     } public static void registerToTab(BuildCreativeModeTabContentsEvent event, Item item, Item after) {
-        event.getEntries().putAfter(new ItemStack(after), new ItemStack(item), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        event.insertAfter(new ItemStack(after), new ItemStack(item), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
     }
 }
